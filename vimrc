@@ -1,3 +1,4 @@
+"鼠标可用
 set mouse=a
 
 "设置行号显示
@@ -32,8 +33,11 @@ set laststatus=2
 "命令行补全参数
 set wildmenu
 
-"设置tab键空4格
+"Tab缩进
 set tabstop=4
+set shiftwidth=4
+set expandtab
+set smarttab
 
 "自动检测文件类型
 filetype plugin indent on
@@ -79,7 +83,7 @@ set incsearch		  "输入搜索内容时就显示搜索结果
 set ignorecase
 set hlsearch		  "搜索时高亮显示被找到的文本
 
-"airline settings.
+"airline settings
 let g:airline_theme = 'simple'
 let g:airline_powerline_fonts = 1
 
