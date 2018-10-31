@@ -9,8 +9,11 @@ set relativenumber
 
 "显示标尺
 set ruler
+
+"编码
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
-set enc=utf8
+set fileencoding=utf-8
+set encoding=utf-8
 set fencs=utf8,gbk,gb2312,gb18030
 
 "语法高亮
@@ -47,7 +50,6 @@ set autoindent
 set cindent
 set smartindent
 set shiftwidth=4
-
 
 "映射光标在窗口间移动的快捷键
 nmap <C-H> <C-W>h
