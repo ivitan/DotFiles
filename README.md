@@ -1,2 +1,1 @@
-
-vim config
+# Vimrc  config
