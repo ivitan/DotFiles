@@ -58,8 +58,8 @@ nmap <C-K> <C-W>k
 nmap <C-L> <C-W>l
 
 "插件安装列表
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible  " be iMproved, required
+filetype off " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
@@ -72,19 +72,19 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end() " required
+filetype plugin indent on " required
 
 "基本主题配置
-set bg=dark    		   "设置背景为黑色
+set bg=dark  "设置背景为黑色
 colorscheme gruvbox    "设置主题为 gruvbox
 set guioptions=        "去掉两边的scrollbar
 set guifont=Monaco:h17 "设置字体和字的大小
 set cuc
 set cul
-set incsearch		  "输入搜索内容时就显示搜索结果
+set incsearch "输入搜索内容时就显示搜索结果
 set ignorecase
-set hlsearch		  "搜索时高亮显示被找到的文本
+set hlsearch "搜索时高亮显示被找到的文本
 
 "airline settings
 let g:airline_theme = 'simple'
