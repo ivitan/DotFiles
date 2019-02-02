@@ -36,7 +36,7 @@ set laststatus=2
 "命令行补全参数
 set wildmenu
 
-"Tab缩进
+"缩进
 set tabstop=4
 set shiftwidth=4
 set expandtab
