@@ -7,7 +7,7 @@ set number
 "将行号设置为相对行号
 set relativenumber
 
-"显示标尺
+"标尺
 set ruler
 
 "编码
