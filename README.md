@@ -1,2 +1,2 @@
-# Vimrc config
-- 简单的 Vim 配置
+# Linux config
+- 简单的 Linux 配置
