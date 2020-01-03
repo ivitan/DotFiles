@@ -154,6 +154,11 @@ fi
  
 zplug load
  
+# Perl Environment
+if ! [ -x "$(command -v perl)" ];then
+  pkg install perl -y
+fi
+
 #.# Better Git Logs.
 ### Using EMOJI-LOG (https://github.com/ahmadawais/Emoji-Log).
 # Git Commit, Add all and Push — in one step.
