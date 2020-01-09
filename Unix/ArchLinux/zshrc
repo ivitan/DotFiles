@@ -70,11 +70,11 @@ export PYTHONIOENCODING=UTF-8    # for python
 export PYTEST_ADDOPTS="--color=yes"    # py.test color output
 
 # Preferred editor for local and remote sessions
- if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
- else
-   export EDITOR='nvim'
- fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # fzf config, must sudo pacman install fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -90,7 +90,8 @@ eval $(thefuck --alias)
 # zplug configruation
 if [[ ! -d "${ZPLUG_HOME}" ]]; then
   if [[ ! -d ~/.zplug ]]; then
-    git clone https://github.com/zplug/zplug ~/.zplug
+    #git clone https://github.com/zplug/zplug ~/.zplug
+    curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
     # If we can't get zplug, it'll be a very sobering shell experience. To at
     # least complete the sourcing of this file, we'll define an always-false
     # returning zplug function.
@@ -124,31 +125,31 @@ zplug load
 ### Using EMOJI-LOG (https://github.com/ahmadawais/Emoji-Log).
 # Git Commit, Add all and Push — in one step.
 function gcap() {
-    git add . && git commit -m "$*" && git push
+  git add . && git commit -m "$*" && git push
 }
 # NEW.
 function gnew() {
-    gcap "📦 NEW: $@"
+  gcap "📦 NEW: $@"
 }
 # IMPROVE.
 function gimp() {
-    gcap "👌 IMPROVE: $@"
+  gcap "👌 IMPROVE: $@"
 }
 # FIX.
 function gfix() {
-    gcap "🐛 FIX: $@"
+  gcap "🐛 FIX: $@"
 }
 # RELEASE.
 function grlz() {
-    gcap "🚀 RELEASE: $@"
+  gcap "🚀 RELEASE: $@"
 }
 # DOC.
 function gdoc() {
-    gcap "📖 DOC: $@"
+  gcap "📖 DOC: $@"
 }
 # TEST.
 function gtst() {
-    gcap "✅ TEST: $@"
+  gcap "✅ TEST: $@"
 }
 
 # Colorful Man Page
@@ -163,3 +164,10 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
+# Spaceship-prompt vi-mode
+SPACESHIP_VI_MODE_SHOW=false
+
+# Perl
+if ! [ -x "$(command -v perl)" ];then
+  apt install perl -y
+fi
