@@ -1,0 +1,11 @@
+# 1. 设置每 60 秒发送一次心跳包，防止几分钟没用 ssh 就断
+# 2. 国外的服务器用我国内的服务器进行下中转
+
+Host * 
+	ServerAliveInterval 60
+
+Host  *.vitan.me
+	IdentityFile ~/.ssh/id_rsa
+	User root
+	IdentitiesOnly yes 
+	ProxyCommand ssh -W %h:%p root@ip 2  >  /dev/null
