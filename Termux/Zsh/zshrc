@@ -159,6 +159,13 @@ zplug load
 #.# Better Git Logs.
 ### Using EMOJI-LOG (https://github.com/ahmadawais/Emoji-Log).
 # Git Commit, Add all and Push — in one step.
+function ad() {
+    git add . && git commit -m "$*"
+}
+
+function gadd() {
+    ad "⚡️ ADD: $@"
+}
 function gcap() {
     git add . && git commit -m "$*" && git push
 }
