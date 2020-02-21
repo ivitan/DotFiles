@@ -53,6 +53,17 @@ alias vitan="hexo clean && hexo g && hexo s"
 alias blog="cd blog && vs"
 alias tnew='tmux new -s'
 alias update='apt update && apt upgrade'
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+alias ls='ls -F --color=auto'
+alias ll='ls -al'
+alias grep='grep --color=auto'
+alias la='ls -a'
+#alias pacman='sudo pacman-color'
+#alias p='sudo pacman-color'
+#alias y='yaourt'
+alias h='htop'
  
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -321,6 +332,14 @@ zle -N sudo-command-line
 bindkey "\e\e" sudo-command-line
 #}}}
  
+#[Esc][h] man 当前命令时，显示简短说明
+alias run-help >&/dev/null && unalias run-help
+autoload run-help
+ 
+#历史命令 top10
+alias top10='print -l  ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
+#}}}
+
 # install zplug, plugin manager for zsh, https://github.com/zplug/zplug
 # curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 # zplug configruation
