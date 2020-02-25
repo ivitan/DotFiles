@@ -23,7 +23,7 @@ function ad() {
 }
 
 function gadd() {
-    ad "⚔️ ADD: $@"
+    ad "⚡ ADD: $@"
 }
 
 function gcap() {
