@@ -1,4 +1,4 @@
-" 一般设置
+">> 一般设置
 set mouse=a              " 鼠标可用
 set relativenumber       " 将行号设置为相对行号
 set wildmenu             " 命令行补全参数
@@ -16,19 +16,19 @@ set cursorline           " 高亮显示当前行
 set ttimeoutlen=0        " 设置<ESC>键响应时间
 set virtualedit=block,onemore  " 允许光标出现在最后一个字符的后面
 
-" 搜索设置
+">> 搜索设置
 set hlsearch            " 高亮显示搜索结果
 set incsearch           " 开启实时搜索功能
 set ignorecase          " 搜索时大小写不敏感
 
-" 编码设置
+">> 编码设置
 set langmenu=zh_CN.UTF-8
 set helplang=cn
 set termencoding=utf-8
 set encoding=utf8
 set fileencodings=utf8,ucs-bom,gbk,cp936,gb2312,gb18030
 
-" 语法高亮
+">> 语法高亮
 syntax enable
 syntax on
 
@@ -36,38 +36,38 @@ hi pythonSelf            ctermfg=174 guifg=#6094DB cterm=bold gui=bold
 let python_highlight_all=1
 syntax enable
 
-" 状态行颜色
+">> 状态行颜色
 highlight StatusLine guifg=SlateBlue guibg=Yellow
 highlight StatusLineNC guifg=Gray guibg=White
 
-" 增强模式中的命令行自动完成操作
+">> 增强模式中的命令行自动完成操作
 set wildmenu
 
-" 总是显示状态行
+">> 总是显示状态行
 set laststatus=2
 
-" 命令行补全参数
+">> 命令行补全参数
 set wildmenu
 
-" 设置tab键空4格
+">> 设置tab键空4格
 set tabstop=4
 
-" 自动检测文件类型
+">> 自动检测文件类型
 filetype plugin indent on
 
-" 开启自动缩进，智能缩进
+">> 开启自动缩进，智能缩进
 set autoindent
 set cindent
 set smartindent
 set shiftwidth=4
 
-" 映射光标在窗口间移动的快捷键
+">> 映射光标在窗口间移动的快捷键
 nmap <C-H> <C-W>h
 nmap <C-J> <C-W>j
 nmap <C-K> <C-W>k
 nmap <C-L> <C-W>l
 
-" vim-plug
+">> vim-plug
 call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -80,7 +80,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/syntastic'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
-" <Nerdtree>
+">> Nerdtree
 Plug 'scrooloose/nerdtree'          " File tree manager
 Plug 'jistr/vim-nerdtree-tabs'      " enhance nerdtree's tabs
 Plug 'ryanoasis/vim-devicons'       " add beautiful icons besides files
@@ -145,17 +145,15 @@ call plug#end()
         "let g:NERDTreeExtensionHighlightColor = {} " this line is needed to avoid error
 " }
 
-" 基本主题配置
+">> 基本主题配置
 set bg=dark  "设置背景为黑色
 colorscheme gruvbox    "设置主题为 gruvbox
 set guioptions=        "去掉两边的scrollbar
 set guifont=Monaco:h17 "设置字体和字的大小
 
-set incsearch "输入搜索内容时就显示搜索结果
-set ignorecase
-set hlsearch "搜索时高亮显示被找到的文本
 
-"airline settings
+
+">> airline settings
 let g:airline_theme = 'hybrid'
 let g:airline_powerline_fonts = 1
 
@@ -172,15 +170,15 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 let g:airline#extensions#tabline#enabled = 1
 
-" show absolute file path in status line
+">> show absolute file path in status line
 let g:airline_section_c = '%<%F%m %#__accent_red#%{airline#util#wrap(airline#parts#readonly(),0)}%#__restore__#'
 
-" show tab number in tab line
+">> show tab number in tab line
 let g:airline#extensions#tabline#tab_nr_type = 1
 
-" Enable folding
+">> Enable folding
 set foldmethod=indent
 set foldlevel=99
 
-" Enable folding with the spacebar
+">> Enable folding with the spacebar
 nnoremap <space> za
