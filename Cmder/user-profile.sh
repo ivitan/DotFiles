@@ -4,18 +4,17 @@
 # export PATH=${CMDER_ROOT}/vendor/whatever:${PATH}
 
 # 别名
-#打开当前文件夹
+alias vs="code ."
 alias e.='explorer .'
-alias ls='ls --show-control-chars -F --color $*'
-alias clear=cls
-alias gl='git pull origin $1'
-alias glm='git pull origin master'
-alias gp='git push origin $1'
-alias gpm='git push origin master'
-alias cpd='cap production deploy'
-alias cpt='cap staging deploy'
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+alias ls='ls -F --color=auto'
+alias ll='ls -al'
+alias grep='grep --color=auto'
+alias la='ls -a'
+alias l.='ls -d .* --color=tty'
 alias vitan='hexo clean && hexo g && hexo s'
-
 
 # Git Commit, Add all and Push — in one step.
 function ad() {
