@@ -1,3 +1,24 @@
+# < powerlevel10k > ----------------------{
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
+POWERLEVEL9K_STATUS_CROSS=true
+POWERLEVEL9K_MODE=nerdfont-complete
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
+POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=$''
+POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=$''
+# POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="black"
+# POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="white"
+POWERLEVEL9K_SHORTEN_STRATEGY=truncate_left
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+# -------}
+
 # < zsh and oh-my-zsh. 安装zsh、oh-my-zsh > ----------------------{
 if [[ ! -d ~/.oh-my-zsh ]]; then
   if ! [[ -x "$(command -v curl)" ]];then
@@ -331,9 +352,9 @@ fi
 if [[ -d "${ZPLUG_HOME}" ]]; then
   source "${ZPLUG_HOME}/init.zsh"
 fi
-zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
+#zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 zplug 'plugins/git', from:oh-my-zsh, if:'which git'
-#zplug 'romkatv/powerlevel10k', use:powerlevel10k.zsh-theme
+zplug 'romkatv/powerlevel10k', use:powerlevel10k.zsh-theme
 zplug "plugins/vi-mode", from:oh-my-zsh
 zplug 'zsh-users/zsh-autosuggestions'
 zplug 'zsh-users/zsh-completions', defer:2
@@ -391,27 +412,6 @@ export LESS_TERMCAP_se=$'\e[0m'
 export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
-# -------}
-
-# < powerlevel10k > ----------------------{
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon root_indicator dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
-POWERLEVEL9K_STATUS_CROSS=true
-POWERLEVEL9K_MODE=nerdfont-complete
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR=$''
-POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=$''
-# POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND="black"
-# POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND="white"
-POWERLEVEL9K_SHORTEN_STRATEGY=truncate_left
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 # -------}
 
 # Perl
