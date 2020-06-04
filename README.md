@@ -111,8 +111,6 @@ For more information, see [wt_profiles.json](./Windows/wt_profiles.json).
 
 ## Linux
 
-> ❗ I don't use Linux (or Manjaro) any more. I recommend using WSL on Windows. (Or just buy a Mac for god sake.)
-
 ### Arch Linux WSL (for use on Windows)
 
 Config files: [`_wsl_zshrc`](./Windows/_wsl_zshrc)
