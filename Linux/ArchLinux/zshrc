@@ -1,4 +1,12 @@
+# < Path > ----------------------{
+export PREFIX=/data/data/com.termux/files/usr
+export PATH=${PATH}:${PREFIX}/bin
+# -------}
+
 # < zsh and oh-my-zsh. 安装zsh、oh-my-zsh > ----------------------{
+# Path to your oh-my-zsh installation
+export ZSH=$HOME/.oh-my-zsh
+
 if [[ ! -d ~/.oh-my-zsh ]]; then
   if ! [[ -x "$(command -v curl)" ]];then
     yes|sudo pacman -S curl -y
