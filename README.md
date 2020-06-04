@@ -2,11 +2,11 @@
 <a href="#macos">macOS</a> · <a href="#windows">Windows</a> · <a href="#linux">Linux</a> · <a href="#scripts">Scripts</a>
 </div>
 
-# 🚯 Configer
+# 🚯 Config
 
 ![](https://flat.badgen.net/badge/platform/macOS,Windows,Linux?list=|)
 
-Modified from https://github.com/spencerwooo/dotfiles
+Modified from [spencerwoo98/dotfiles](https://github.com/spencerwooo/dotfiles)
 
 ## macOS
 
@@ -44,8 +44,6 @@ Fully customized color scheme, see [_hyper_macos.js](./macOS/_hyper_macos.js)
 - [.skhdrc](./macOS/_skhdrc)
 
 ### Bitbar Scripts
-
-<h6>Your custom, open source version of iStat Menu. 阅读更多：<a href="https://sspai.com/post/58683">监控疫情、看天气、查汇率…… Mac 菜单栏「万能」工具箱：BitBar </a></h6>
 
 **Bitbar**: put the output from any script or program in your macOS menu bar. Scripts I use are available at: [bitbar](./macOS/bitbar)
 
@@ -159,7 +157,7 @@ curl -s https://raw.githubusercontent.com/pablopunk/colortest/master/colortest |
 <h6>Minimal script to show terminal colors.</h6>
 
 ```shell
-curl -s https://raw.githubusercontent.com/spencerwooo/dotfiles/master/scripts/color.sh | bash
+curl -s https://raw.githubusercontent.com/ivitan/UnixConfig/master/scripts/color.sh | bash
 ```
 
 ![](https://i.loli.net/2019/08/16/ZOnMBPUSQcIrsk5.png)
@@ -191,7 +189,7 @@ GitHub: [xorg62/tty-clock](https://github.com/xorg62/tty-clock)
 ![](https://i.loli.net/2019/08/16/eRdUtOZcIa31Gf2.png)
 
 ## Special Thanks
-
+- [github/spencerwoo98](https://github.com/spencerwoo98)
 - [elenapan/dotfiles](https://github.com/elenapan/dotfiles)
 - [reddit/r/unixporn](https://www.reddit.com/r/unixporn/)
 
@@ -200,9 +198,5 @@ GitHub: [xorg62/tty-clock](https://github.com/xorg62/tty-clock)
 This is published via the [MIT License](https://github.com/spencerwoo98/awesome-alias/blob/master/LICENSE).
 
 ---
-
-🚯 **Dotfiles** ©Spencer Woo. Released under the MIT License.
-
-Authored and maintained by Spencer Woo.
 
 [@Blog](https://vitan.me/) · [@GitHub](https://github.com/ivitan)
