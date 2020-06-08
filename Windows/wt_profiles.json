@@ -1,6 +1,5 @@
 {
-    "globals" :
-    {
+    "$schema": "https://aka.ms/terminal-profiles-schema",
         "alwaysShowTabs" : true,
         "defaultProfile" : "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
         "initialCols" : 120,
@@ -221,8 +220,7 @@
         "requestedTheme" : "dark",
         "showTabsInTitlebar" : true,
         "showTerminalTitleInTitlebar" : true,
-        "wordDelimiters" : " ./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}~?\u2502"
-    },
+        "wordDelimiters" : " ./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}~?\u2502",
     "profiles" :
     [
         {
@@ -301,6 +299,12 @@
             "snapOnInput" : true,
             "startingDirectory" : "%USERPROFILE%",
             "useAcrylic" : true
+        },
+        {
+            "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
+            "hidden": false,
+            "name": "Arch",
+            "source": "Windows.Terminal.Wsl"
         }
     ],
     "schemes" :

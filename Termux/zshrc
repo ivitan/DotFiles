@@ -327,7 +327,7 @@ fi
 # zplug configruation
 if [[ ! -d "${ZPLUG_HOME}" ]]; then
   if [[ ! -d ~/.zplug ]]; then
-    #git clone https://github.com/zplug/zplug ~/.zplug
+    # git clone https://github.com/zplug/zplug ~/.zplug
     curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
     # If we can't get zplug, it'll be a very sobering shell experience. To at
     # least complete the sourcing of this file, we'll define an always-false
