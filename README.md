@@ -2,7 +2,7 @@
 <a href="#macos">macOS</a> · <a href="#windows">Windows</a> · <a href="#linux">Linux</a> · <a href="#scripts">Scripts</a>
 </div>
 
-# 🚯 Config
+# DotFiles
 
 ![](https://flat.badgen.net/badge/platform/macOS,Windows,Linux?list=|)
 
@@ -27,7 +27,7 @@ Modified from [spencerwoo98/dotfiles](https://github.com/spencerwooo/dotfiles)
 
 ![](https://i.loli.net/2019/08/15/Nt9HMKlpJxLaE3Y.png)
 
-Fully customized color scheme, see [_hyper_macos.js](./macOS/_hyper_macos.js)
+Fully customized color scheme, see [hyper_macos.js](./macOS/hyper_macos.js)
 
 - Shell: [Oh-My-Zsh](https://ohmyz.sh/)
 - ZSH Themes: [Powerlevel10k](https://github.com/romkatv/powerlevel10k), [Pure](https://github.com/sindresorhus/pure)
@@ -40,8 +40,8 @@ Fully customized color scheme, see [_hyper_macos.js](./macOS/_hyper_macos.js)
 
 [Yabai](https://github.com/koekeishiya/yabai) - a macOS Tiling WM.
 
-- [.yabairc](./macOS/_yabairc)
-- [.skhdrc](./macOS/_skhdrc)
+- [.yabairc](./macOS/yabairc)
+- [.skhdrc](./macOS/skhdrc)
 
 ### Bitbar Scripts
 
@@ -111,7 +111,7 @@ For more information, see [wt_profiles.json](./Windows/wt_profiles.json).
 
 ### Arch Linux WSL (for use on Windows)
 
-Config files: [`_wsl_zshrc`](./Windows/_wsl_zshrc)
+Config files: [`wsl_zshrc`](./Windows/wsl_zshrc)
 
 ![](https://i.loli.net/2019/08/21/ZMhu2zobPDNWiYw.png)
 
@@ -119,8 +119,8 @@ Config files: [`_wsl_zshrc`](./Windows/_wsl_zshrc)
 
 ### Manjaro
 
-- ZSH config files: [`_arch_zshrc`](./Linux/_arch_zshrc)
-- Hyper config files: [`_hyper.js`](./Linux/_hyper.js)
+- ZSH config files: [`_arch_zshrc`](./Linux/arch_zshrc)
+- Hyper config files: [`hyper.js`](./Linux/hyper.js)
 
 ![](https://i.loli.net/2018/12/31/5c29a4c819cab.png)
 
