@@ -33,22 +33,22 @@ function GitAdd{ git add . ; git commit -m "⚡ ADD: $args" }
 function GitCap{ git add . ; git commit -m "$args" ; git push }
 
 # NEW.
-function GitNew{ GitCap "📦 NEW: $args" }
+function GitNew{ gcap "📦 NEW: $args" }
 
 # IMPROVE.
-function GitImp{ GitCap "👌 IMPROVE: $args" }
+function GitImp{ gcap "👌 IMPROVE: $args" }
 
 # FIX.
-function GitFix{ GitCap "🐛 FIX: $args" }
+function GitFix{ gcap "🐛 FIX: $args" }
 
 # RELEASE.
-function GitRlz{ GitCap "🚀 RELEASE: $args" }
+function GitRlz{ gcap "🚀 RELEASE: $args" }
 
 # DOC.
-function GitDoc{ GitCap"📖 DOC: $args" }
+function GitDoc{ gcap"📖 DOC: $args" }
 
 # TEST.
-function GitTst{ GitCap "✅ TEST: $args" }
+function GitTst{ gcap "✅ TEST: $args" }
 
 Import-Module posh-git
 Import-Module oh-my-posh
