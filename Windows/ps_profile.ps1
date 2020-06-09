@@ -28,27 +28,27 @@ function Vscode { code .}
 function HexoServe { hexo clean; hexo g; hexo s}
 
 # Git Commit, Add all and Push — in one step.
-function Ad{ git add . ; git commit -m "$*" }
-function GitAdd{ GitAd "⚡ ADD: $@" }
+function Ad{ git add . ; git commit -m Write-Host "$*" }
+function GitAdd{ GitAd Write-Host "⚡ ADD: $@" }
 function GitCap{ git add . ; git commit -m "$*" ; git push }
 
 # NEW.
-function GitNew{ GitCap "📦 NEW: $@" }
+function GitNew{ GitCap Write-Host "📦 NEW: $@" }
 
 # IMPROVE.
-function GitImp{ GitCap "👌 IMPROVE: $@" }
+function GitImp{ GitCap Write-Host "👌 IMPROVE: $@" }
 
 # FIX.
-function GitFix{ GitCap "🐛 FIX: $@" }
+function GitFix{ GitCap Write-Host "🐛 FIX: $@" }
 
 # RELEASE.
-function GitRlz{ GitCap "🚀 RELEASE: $@" }
+function GitRlz{ GitCap Write-Host "🚀 RELEASE: $@" }
 
 # DOC.
-function GitDoc{ GitCap "📖 DOC: $@" }
+function GitDoc{ GitCap Write-Host "📖 DOC: $@" }
 
 # TEST.
-function GitTst{ GitCap "✅ TEST: $@" }
+function GitTst{ GitCap Write-Host "✅ TEST: $@" }
 
 Import-Module posh-git
 Import-Module oh-my-posh
