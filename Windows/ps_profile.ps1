@@ -28,27 +28,27 @@ function Vscode { code .}
 function HexoServe { hexo clean; hexo g; hexo s}
 
 # Git Commit, Add all and Push — in one step.
-function Ad{ git add . ; git commit -m Write-Host "$*" }
-function GitAdd{ GitAd Write-Host "⚡ ADD: $@" }
-function GitCap{ git add . ; git commit -m "$*" ; git push }
+function GitAdd{ git add . ; git commit -m "⚡ ADD: $args" }
+
+function GitCap{ git add . ; git commit -m "$args" ; git push }
 
 # NEW.
-function GitNew{ GitCap Write-Host "📦 NEW: $@" }
+function GitNew{ GitCap "📦 NEW: $args" }
 
 # IMPROVE.
-function GitImp{ GitCap Write-Host "👌 IMPROVE: $@" }
+function GitImp{ GitCap "👌 IMPROVE: $args" }
 
 # FIX.
-function GitFix{ GitCap Write-Host "🐛 FIX: $@" }
+function GitFix{ GitCap "🐛 FIX: $args" }
 
 # RELEASE.
-function GitRlz{ GitCap Write-Host "🚀 RELEASE: $@" }
+function GitRlz{ GitCap "🚀 RELEASE: $args" }
 
 # DOC.
-function GitDoc{ GitCap Write-Host "📖 DOC: $@" }
+function GitDoc{ GitCap"📖 DOC: $args" }
 
 # TEST.
-function GitTst{ GitCap Write-Host "✅ TEST: $@" }
+function GitTst{ GitCap "✅ TEST: $args" }
 
 Import-Module posh-git
 Import-Module oh-my-posh
@@ -64,7 +64,6 @@ Set-Alias pls PrettyLS
 Set-Alias suu UpdateScoop
 Set-Alias vs Vscode
 Set-Alias vitan HexoServe
-Set-Alias GitAd ad
 Set-Alias gadd GitAdd
 Set-Alias gcap GitCap
 Set-Alias gnew GitNew
