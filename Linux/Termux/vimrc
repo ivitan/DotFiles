@@ -84,6 +84,17 @@ Plug 'jistr/vim-nerdtree-tabs'      " enhance nerdtree's tabs
 Plug 'ryanoasis/vim-devicons'       " add beautiful icons besides files
 Plug 'Xuyuanp/nerdtree-git-plugin'  " display git status within Nerdtree
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " enhance devicons
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
+
 call plug#end()
  
 " <Nerdtree>-------------------{
