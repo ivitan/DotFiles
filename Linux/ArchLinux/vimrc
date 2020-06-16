@@ -110,7 +110,7 @@ call plug#end()
         let NERDTreeDirArrows=1    " Display arrows instead of ascii art in NERDTree
         let NERDTreeChDirMode=0    " Change current working directory based on root directory in NERDTree
         let g:NERDTreeHidden=1     " Don't show hidden files
-        let NERDTreeWinSize=15     " Initial NERDTree width
+        let NERDTreeWinSize=30    " Initial NERDTree width
         let NERDTreeAutoDeleteBuffer = 1  " Auto delete buffer deleted with NerdTree
         let NERDTreeShowBookmarks=1   " Show NERDTree bookmarks
         let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.swo', '__pycache__']   " Hide temp files in NERDTree

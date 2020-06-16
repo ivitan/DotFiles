@@ -33,7 +33,7 @@ function GitAdd{ git add . ; git commit -m "⚡ ADD: $args" }
 function GitCap{ git add . ; git commit -m "$args" ; git push }
 
 # NEW.
-function GitNew{ gcap "\u1F4E6 NEW: $args" }
+function GitNew{ gcap "📦 NEW: $args" }
 
 # IMPROVE.
 function GitImp{ gcap "👌 IMPROVE: $args" }
