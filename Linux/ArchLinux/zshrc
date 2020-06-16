@@ -89,6 +89,12 @@ alias unfuckgfw="unset http_proxy https_proxy && echo '- Welcome inside. -'"
 # Jump straight to my Code folder and say something cute via cowsay
 # Do change $PATH_TO_YOUR_CODE according to your own configurations
 # Refer to README for installations of cowsay and fortune
+if ! [ -x "$(command -v fortune)" ];then
+  yes|sudo pacman -S fortune
+fi
+if ! [ -x "$(command -v cowsay)" ];then
+  yes|sudo pacman -S cowsay
+fi
 alias gocode="cd $HOME/$PATH_TO_YOUR_CODE && fortune | cowsay"
 alias gowork="cd $HOME/WorkSpace && fortune | cowsay"
 

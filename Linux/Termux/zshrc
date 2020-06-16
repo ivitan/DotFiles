@@ -89,6 +89,13 @@ alias unfuckgfw="unset http_proxy https_proxy && echo '- Welcome inside. -'"
 # Jump straight to my Code folder and say something cute via cowsay
 # Do change $PATH_TO_YOUR_CODE according to your own configurations
 # Refer to README for installations of cowsay and fortune
+# To install Perl
+if ! [ -x "$(command -v fortune)" ];then
+  apt install fortune -y
+fi
+if ! [ -x "$(command -v cowsay)" ];then
+  apt install cowsay -y
+fi
 alias gocode="cd $HOME/$PATH_TO_YOUR_CODE && fortune | cowsay"
 alias gowork="cd $HOME/WorkSpace && fortune | cowsay"
 
