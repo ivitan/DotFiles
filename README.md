@@ -119,7 +119,7 @@ Config files: [`wsl_zshrc`](./Windows/wsl_zshrc)
 
 ### Manjaro
 
-- ZSH config files: [`_arch_zshrc`](./Linux/arch_zshrc)
+- ZSH config files: [`_arch_zshrc`](./Linux/ArchLinux/zshr)
 - Hyper config files: [`hyper.js`](./Linux/hyper.js)
 
 ![](https://i.loli.net/2018/12/31/5c29a4c819cab.png)
