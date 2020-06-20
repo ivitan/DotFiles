@@ -4,56 +4,11 @@
 
 # DotFiles
 
-![](https://flat.badgen.net/badge/platform/macOS,Windows,Linux?list=|)
-
-Modified from [spencerwoo98/dotfiles](https://github.com/spencerwooo/dotfiles)
-
-## macOS
-
-### iTerm2
-
-<h6>🔺WARNING: Please upgrade iTerm2 to the latest 3.3 version in order to achieve the customizable "Minimal Titlebar" and "Status bar".</h6>
-
-![](https://i.loli.net/2019/08/16/DpztirnBE6yvqh7.png)
-
-- Color Scheme: [manta.itermcolors](./macOS/manta.itermcolors)
-- Set "Tab bar height (points) for minimal theme" to 22, under "Preference - Advanced".
-
-  ![](https://i.loli.net/2019/08/16/dr7Kp2SvsW6xGDt.png)
-
-- Set "Transparency" to near "Opaque", under "Preference - Profiles - Default - Window".
-
-### Hyper
-
-![](https://i.loli.net/2019/08/15/Nt9HMKlpJxLaE3Y.png)
-
-Fully customized color scheme, see [hyper_macos.js](./macOS/hyper_macos.js)
-
-- Shell: [Oh-My-Zsh](https://ohmyz.sh/)
-- ZSH Themes: [Powerlevel10k](https://github.com/romkatv/powerlevel10k), [Pure](https://github.com/sindresorhus/pure)
-
-<h6>🔺 NOTICE: Powerlevel10k can generate the same prompt as Pure given the right configuration options. But P10K is able to deal with large git repositories much much faster. See: <a href="https://gist.github.com/romkatv/7cbab80dcbc639003066bb68b9ae0bbf">romkatv/Pure style for Powerlevel10k.md</a></h6>
-
-### Window Manager - yabai
-
-![](https://i.loli.net/2019/08/15/PcK2W8JXs4xQgdw.png)
-
-[Yabai](https://github.com/koekeishiya/yabai) - a macOS Tiling WM.
-
-- [.yabairc](./macOS/yabairc)
-- [.skhdrc](./macOS/skhdrc)
-
-### Bitbar Scripts
-
-**Bitbar**: put the output from any script or program in your macOS menu bar. Scripts I use are available at: [bitbar](./macOS/bitbar)
-
-|                    Colorful battery                    |                       CPU Stats                        |
-| :----------------------------------------------------: | :----------------------------------------------------: |
-| ![](https://i.loli.net/2020/02/02/iC1olKmTRWfuBzb.png) | ![](https://i.loli.net/2020/02/02/k7cIl6vroGASYh9.png) |
+![](https://flat.badgen.net/badge/platform/macOS,Windows,Linux,Termux?list=|)
 
 ## Windows
 
-![](https://i.loli.net/2020/02/09/NIKWH3nub1YAQJv.png)
+![](![](https://cdn.jsdelivr.net/gh/ivitan/Picture@master/images/20200620100620.png))
 
 ### PowerShell
 
@@ -108,6 +63,10 @@ See [ps_profile.ps1](./Windows/ps_profile.ps1) for detailed information.
 For more information, see [wt_profiles.json](./Windows/wt_profiles.json).
 
 ## Linux
+### Termux (Andriod Terminal)
+Config files: [`zshrc`](./Linux/Termux/zshrc)
+
+![](https://cdn.jsdelivr.net/gh/ivitan/Picture@master/images/TermuxZsh.jpg)
 
 ### Arch Linux WSL (for use on Windows)
 
@@ -117,14 +76,57 @@ Config files: [`wsl_zshrc`](./Windows/wsl_zshrc)
 
 <details>
 
-### Manjaro
+### ArchLinux/Manjaro
 
-- ZSH config files: [`_arch_zshrc`](./Linux/ArchLinux/zshr)
+- ZSH config files: [`arch_zshrc`](./Linux/ArchLinux/zshrc)
 - Hyper config files: [`hyper.js`](./Linux/hyper.js)
 
 ![](https://i.loli.net/2018/12/31/5c29a4c819cab.png)
 
 </details>
+
+## macOS
+
+### iTerm2
+
+<h6>🔺WARNING: Please upgrade iTerm2 to the latest 3.3 version in order to achieve the customizable "Minimal Titlebar" and "Status bar".</h6>
+
+![](https://i.loli.net/2019/08/16/DpztirnBE6yvqh7.png)
+
+- Color Scheme: [manta.itermcolors](./macOS/manta.itermcolors)
+- Set "Tab bar height (points) for minimal theme" to 22, under "Preference - Advanced".
+
+  ![](https://i.loli.net/2019/08/16/dr7Kp2SvsW6xGDt.png)
+
+- Set "Transparency" to near "Opaque", under "Preference - Profiles - Default - Window".
+
+### Hyper
+
+![](https://i.loli.net/2019/08/15/Nt9HMKlpJxLaE3Y.png)
+
+Fully customized color scheme, see [hyper_macos.js](./macOS/hyper_macos.js)
+
+- Shell: [Oh-My-Zsh](https://ohmyz.sh/)
+- ZSH Themes: [Powerlevel10k](https://github.com/romkatv/powerlevel10k), [Pure](https://github.com/sindresorhus/pure)
+
+<h6>🔺 NOTICE: Powerlevel10k can generate the same prompt as Pure given the right configuration options. But P10K is able to deal with large git repositories much much faster. See: <a href="https://gist.github.com/romkatv/7cbab80dcbc639003066bb68b9ae0bbf">romkatv/Pure style for Powerlevel10k.md</a></h6>
+
+### Window Manager - yabai
+
+![](https://i.loli.net/2019/08/15/PcK2W8JXs4xQgdw.png)
+
+[Yabai](https://github.com/koekeishiya/yabai) - a macOS Tiling WM.
+
+- [.yabairc](./macOS/yabairc)
+- [.skhdrc](./macOS/skhdrc)
+
+### Bitbar Scripts
+
+**Bitbar**: put the output from any script or program in your macOS menu bar. Scripts I use are available at: [bitbar](./macOS/bitbar)
+
+|                    Colorful battery                    |                       CPU Stats                        |
+| :----------------------------------------------------: | :----------------------------------------------------: |
+| ![](https://i.loli.net/2020/02/02/iC1olKmTRWfuBzb.png) | ![](https://i.loli.net/2020/02/02/k7cIl6vroGASYh9.png) |
 
 ## Scripts
 
@@ -193,9 +195,11 @@ GitHub: [xorg62/tty-clock](https://github.com/xorg62/tty-clock)
 - [elenapan/dotfiles](https://github.com/elenapan/dotfiles)
 - [reddit/r/unixporn](https://www.reddit.com/r/unixporn/)
 
+macOS Modified from [spencerwoo98/dotfiles](https://github.com/spencerwooo/dotfiles)
+
 ## License
 
-This is published via the [MIT License](https://github.com/spencerwoo98/awesome-alias/blob/master/LICENSE).
+This is published via the [MIT License](https://github.com/ivitan/DotFiles/blob/master/LICENSE).
 
 ---
 
