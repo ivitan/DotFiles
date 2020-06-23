@@ -228,7 +228,7 @@
             "background" : "#171717",
             "closeOnExit" : true,
             "colorScheme" : "cyberpunk",
-            "commandline" : "powershell.exe",
+            "commandline" : "powershell.exe -NoLogo",
             "cursorColor" : "#FFFFFF",
             "cursorShape" : "bar",
             "fontFace" : "Sarasa Term SC",
