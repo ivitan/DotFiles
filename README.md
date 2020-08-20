@@ -16,7 +16,7 @@
 | :--------------------------------- | :---------------------------------------------------------------------------------------------------------- |
 | Prompt theme engine                | [oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh)                                                  |
 | Prompt theme                       | [SpencerTechy.psm1](./Windows/SpencerTechy.psm1)                                                            |
-| Font                               | [JetBrains Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono) |
+| Font                               | [JetBrains Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono)、[Sarasa Gothic](https://github.com/be5invis/Sarasa-Gothic) |
 | Color theme (for Windows Terminal) | [Snazzy](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/windowsterminal/Snazzy.json)         |
 
 Go to [oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh) for information on how to install. After installing, you can take a look at your oh-my-posh's profile with:
@@ -195,7 +195,7 @@ GitHub: [xorg62/tty-clock](https://github.com/xorg62/tty-clock)
 - [elenapan/dotfiles](https://github.com/elenapan/dotfiles)
 - [reddit/r/unixporn](https://www.reddit.com/r/unixporn/)
 
-macOS Modified from [spencerwoo98/dotfiles](https://github.com/spencerwooo/dotfiles)
+macOS configer Modified from [spencerwoo98/dotfiles](https://github.com/spencerwooo/dotfiles)
 
 ## License
 
