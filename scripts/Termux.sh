@@ -482,6 +482,7 @@ function  items() {
             npm install hexo-generator-feed --save
             npm install hexo-generator-json-content --save
             npm install hexo-helper-qrcode --save
+            npm install hexo-all-minifier --save
             wget https://github.com/ivitan/ivitan.github.io/releases/download/Pin/generator.js -O $HOME/Hexo/node_modules/hexo-generator-index/lib/generator.js
             echo "安装完成"
             line
