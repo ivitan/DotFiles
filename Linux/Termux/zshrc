@@ -319,6 +319,7 @@ autoload run-help
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 # export PATH="/bin:/usr/bin:/sbin:/usr/sbin:/usr/local/bin"
+# export PATH=$PREFIX/local/bin:$PREFIX/bin:$PREFIX/bin/applets:$PATH
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
