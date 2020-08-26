@@ -66,6 +66,9 @@ For more information, see [wt_profiles.json](./Windows/wt_profiles.json).
 ### Termux (Andriod Terminal)
 Config files: [`zshrc`](./Linux/Termux/zshrc)
 
+```sh
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ivitan/DotFiles/master/scripts/Termux.sh)"
+```
 ![](https://cdn.jsdelivr.net/gh/ivitan/Picture@master/images/TermuxZsh.jpg)
 
 ### Arch Linux WSL (for use on Windows)
