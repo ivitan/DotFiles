@@ -198,7 +198,7 @@ GitHub: [xorg62/tty-clock](https://github.com/xorg62/tty-clock)
 - [elenapan/dotfiles](https://github.com/elenapan/dotfiles)
 - [reddit/r/unixporn](https://www.reddit.com/r/unixporn/)
 
-macOS configer Modified from [spencerwoo98/dotfiles](https://github.com/spencerwooo/dotfiles)
+## This project base on [spencerwoo98/dotfiles](https://github.com/spencerwooo/dotfiles)
 
 ## License
 
