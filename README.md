@@ -207,3 +207,7 @@ This is published via the [MIT License](https://github.com/ivitan/DotFiles/blob/
 ---
 
 [@Blog](https://vitan.me/) · [@GitHub](https://github.com/ivitan)
+
+---
+
+![visitors](https://visitor-badge.glitch.me/badge?page_id=ivitan.DotFiles)
