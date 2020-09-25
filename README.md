@@ -206,7 +206,7 @@ This is published via the [MIT License](https://github.com/ivitan/DotFiles/blob/
 
 ---
 
-[@Blog](https://vitan.me/) · [@GitHub](https://github.com/ivitan)
+[@Blog](https://ivitan.com/) · [@GitHub](https://github.com/ivitan)
 
 ---
 
