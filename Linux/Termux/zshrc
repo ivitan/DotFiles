@@ -125,6 +125,7 @@ if ! [ -x "$(command -v cowsay)" ];then
 fi
 alias gocode="cd $HOME/$PATH_TO_YOUR_CODE && fortune | cowsay"
 alias gowork="cd $HOME/WorkSpace && fortune | cowsay"
+alias goblog="cd $HOME/WorkSpace/Hexo && fortune | cowsay"
 
 # Terminal Color tese
 alias colortest="curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f89f403bba96bd7bcd1263/raw/ | bash"
@@ -154,6 +155,8 @@ alias ls='ls -F --color=auto'
 alias ll='ls -al'
 alias grep='grep --color=auto'
 alias la='ls -a'
+alias storage='cd ~/storage'
+alias download='cd ~/storage/downloads'
 
 # Package manager
 alias update='apt update && apt upgrade'
