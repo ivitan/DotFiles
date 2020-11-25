@@ -69,6 +69,7 @@ nmap <C-L> <C-W>l
  
 ">> vim-plug
 call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
