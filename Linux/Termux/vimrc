@@ -69,7 +69,6 @@ nmap <C-L> <C-W>l
  
 ">> vim-plug
 call plug#begin('~/.vim/plugged')
-Plug 'scrooloose/syntastic'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
@@ -85,17 +84,6 @@ Plug 'jistr/vim-nerdtree-tabs'      " enhance nerdtree's tabs
 Plug 'ryanoasis/vim-devicons'       " add beautiful icons besides files
 Plug 'Xuyuanp/nerdtree-git-plugin'  " display git status within Nerdtree
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " enhance devicons
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-let g:deoplete#enable_at_startup = 1
-
 call plug#end()
  
 " <Nerdtree>-------------------{
@@ -111,7 +99,7 @@ call plug#end()
         let NERDTreeDirArrows=1    " Display arrows instead of ascii art in NERDTree
         let NERDTreeChDirMode=0    " Change current working directory based on root directory in NERDTree
         let g:NERDTreeHidden=1     " Don't show hidden files
-        let NERDTreeWinSize=15     " Initial NERDTree width
+        let NERDTreeWinSize=30     " Initial NERDTree width
         let NERDTreeAutoDeleteBuffer = 1  " Auto delete buffer deleted with NerdTree
         let NERDTreeShowBookmarks=1   " Show NERDTree bookmarks
         let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.swo', '__pycache__']   " Hide temp files in NERDTree
@@ -128,7 +116,7 @@ call plug#end()
  
     ">> NERDTREE-GIT
         " Special characters
-    let g:NERDTreeGitStatusIndicatorMapCustom = { 
+    let g:NERDTreeIndicatorMapCustom = { 
         \ "Modified"  : "✹",
         \ "Staged"    : "✚",
         \ "Untracked" : "✭",
