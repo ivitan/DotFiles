@@ -67,7 +67,7 @@ For more information, see [wt_profiles.json](./Windows/wt_profiles.json).
 Config files: [`zshrc`](./Linux/Termux/zshrc)
 
 ```sh
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ivitan/DotFiles/master/scripts/Termux.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ivitan/DotFiles/master/Scripts/Termux.sh)"
 ```
 ![](https://cdn.jsdelivr.net/gh/ivitan/Picture@master/images/TermuxZsh.jpg)
 
