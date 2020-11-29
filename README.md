@@ -12,12 +12,12 @@
 
 ### PowerShell
 
-| Configurations                     | What I use                                                                                                  |
-| :--------------------------------- | :---------------------------------------------------------------------------------------------------------- |
-| Prompt theme engine                | [oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh)                                                  |
-| Prompt theme                       | [SpencerTechy.psm1](./Windows/SpencerTechy.psm1)                                                            |
+| Configurations                     | What I use                                                                                                                                                              |
+| :--------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Prompt theme engine                | [oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh)                                                                                                              |
+| Prompt theme                       | [SpencerTechy.psm1](./Windows/SpencerTechy.psm1)                                                                                                                        |
 | Font                               | [JetBrains Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/JetBrainsMono)、[Sarasa Gothic](https://github.com/be5invis/Sarasa-Gothic) |
-| Color theme (for Windows Terminal) | [Snazzy](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/windowsterminal/Snazzy.json)         |
+| Color theme (for Windows Terminal) | [Snazzy](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/windowsterminal/Snazzy.json)                                                                     |
 
 Go to [oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh) for information on how to install. After installing, you can take a look at your oh-my-posh's profile with:
 
