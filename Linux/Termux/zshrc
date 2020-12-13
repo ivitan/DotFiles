@@ -187,6 +187,9 @@ alias sshsvr="ssh -i $PATH_TO_KEY $SERVER_IP"
 
 # History record top10. 历史命令 top10
 alias top10='print -l  ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
+
+# ttyd is a simple command-line tool for sharing terminal over the web.
+alias ttyd="ttyd -p 8080 zsh"
 # -------}
 
 # < cd and other > ----------------------{
