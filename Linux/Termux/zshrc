@@ -123,6 +123,13 @@ fi
 if ! [ -x "$(command -v cowsay)" ];then
   apt install cowsay -y
 fi
+
+# Install lsd
+if ! [ -x "$(command -v lsd)" ];then
+  apt install lsd -y
+fi
+alias ls="lsd"
+
 alias gocode="cd $HOME/$PATH_TO_YOUR_CODE && fortune | cowsay"
 alias gowork="cd $HOME/WorkSpace && fortune | cowsay"
 alias goblog="cd $HOME/WorkSpace/Hexo && fortune | cowsay"
@@ -151,7 +158,7 @@ alias tnew='tmux new -s'
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
-alias ls='ls -F --color=auto'
+alias lsc='ls -F --color=auto'
 alias ll='ls -al'
 alias grep='grep --color=auto'
 alias la='ls -a'
@@ -180,9 +187,6 @@ alias sshsvr="ssh -i $PATH_TO_KEY $SERVER_IP"
 
 # History record top10. 历史命令 top10
 alias top10='print -l  ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
-
-# tyd is a simple command-line tool for sharing terminal over the web.
-alias ttyd='ttyd -p zsh'
 # -------}
 
 # < cd and other > ----------------------{
