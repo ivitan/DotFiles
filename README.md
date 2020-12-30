@@ -69,7 +69,8 @@ Config files: [`zshrc`](./Linux/Termux/zshrc)
 ```sh
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ivitan/DotFiles/master/Scripts/Termux.sh)"
 ```
-![](https://cdn.jsdelivr.net/gh/ivitan/Picture@master/images/TermuxZsh.jpg)
+
+![](https://cdn.jsdelivr.net/gh/ivitan/Picture@master/imagesTermuxDotfile.png)
 
 ### Arch Linux WSL (for use on Windows)
 
