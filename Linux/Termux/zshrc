@@ -190,6 +190,9 @@ alias top10='print -l  ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
 
 # ttyd is a simple command-line tool for sharing terminal over the web.
 alias ttyd="ttyd -p 8080 zsh"
+
+# Weather
+alias weather='func() { curl -H "Accept-Language: zh" "wttr.in/$1?0" }; func'
 # -------}
 
 # < cd and other > ----------------------{
