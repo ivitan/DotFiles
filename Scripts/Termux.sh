@@ -28,6 +28,7 @@ function menu() {
 
 function MenuItem() {
     read -p "Please enter the option number # " MenuItems
+    line
     case $MenuItems in
     0)
         exit
@@ -87,6 +88,7 @@ function Termux() {
 
 function TermuxItem() {
     read -p "Please enter the option number # " option
+    line
     case $option in
     0)
         line
@@ -382,6 +384,7 @@ function Tools() {
 
 function items() {
     read -p "Please enter the option number：" items
+    line
     case $items in
     1)
         echo "Installing BaiduPCS-Go"
@@ -622,6 +625,7 @@ function development() {
 
 function DevItem() {
     read -p "Please enter the option number：" DevItems
+    line
     case $DevItems in
     0)
         line
@@ -771,6 +775,7 @@ function security() {
 
 function SeItem() {
     read -p "Please enter the option number：" SeItems
+    line
     case $SeItems in
     0)
         line
@@ -912,6 +917,7 @@ function eggs() {
 
 function EggItem() {
     read -p "Please enter the option number：" EggItems
+    line
     case $EggItems in
     0)
         line
