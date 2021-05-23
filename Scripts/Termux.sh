@@ -19,7 +19,7 @@ function logo() {
 
 function menu() {
     echo -e "$yellow 0) Exit"
-    echo -e "$blue Termux Personalisation/Termux 个性化"
+    echo -e "$blue 1) Termux Personalisation 个性化"
     echo -e "$yellow 2) Development environments 开发环境"
     echo -e "$blue 3) Information Security Tools 信息安全工具"
     echo -e "$yellow 4) Practical tools 实用工具"
