@@ -1,5 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
-#Copyright by Vitan @ 2019
+#Copyright by VITAN @ 2019
 
 blue="\033[36m"
 yellow="\033[33m"
