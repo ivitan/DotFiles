@@ -24,10 +24,10 @@ function menu() {
     echo -e "$blue 3) Information Security Tools 信息安全工具"
     echo -e "$yellow 4) Practical tools 实用工具"
     echo -e "$blue 5) Eggs 彩蛋"
-    line
 }
 
 function MenuItem() {
+    line
     read -p "Please enter the option number # " MenuItems
     case $MenuItems in
     0)
@@ -84,10 +84,10 @@ function Termux() {
     echo -e "$yellow 9) Stop CPU hibernation 禁止CUP休眠"
     echo -e "$blue 10) Allow CPU hibernation 允许CPU休眠"
     echo -e "$yellow 11) Install Termux-Api 安装Termux-api"
-    line
 }
 
 function TermuxItem() {
+    line
     read -p "Please enter the option number # " option
     case $option in
     0)
@@ -205,10 +205,10 @@ function PythonTools() {
     echo -e "$blue 8) pandas & scipy"
     echo -e "$yellow 9) Sklearn"
     echo -e "$blue 10) iPython"
-    line
 }
 
 function PyItem() {
+    line
     read -p "Hit your choice # " PyItems
     case $PyItems in
     0)
@@ -381,10 +381,10 @@ function Tools() {
     echo -e "$blue 15) MPV 播放器"
     echo -e "$yellow 16) BiliHelper"
     echo -e "$blue 17) CHFS 文件共享"
-    line
 }
 
 function items() {
+    line
     read -p "Please enter the option number：" items
     case $items in
     1)
@@ -622,10 +622,10 @@ function development() {
     echo -e "$yellow 7) Go"
     echo -e "$blue 8) JAVA"
     echo -e "$yellow 9) SSH"
-    line
 }
 
 function DevItem() {
+    line
     read -p "Please enter the option number：" DevItems
     case $DevItems in
     0)
@@ -772,10 +772,10 @@ function security() {
     echo -e "$blue 11) Hash-Buster"
     echo -e "$yellow 12) WPSeku"
     echo -e "$blue 13) XSStrike"
-    line
 }
 
 function SeItem() {
+    line
     read -p "Please enter the option number：" SeItems
     case $SeItems in
     0)
@@ -914,10 +914,10 @@ function eggs() {
     echo -e "$yellow 6) fortune"
     echo -e "$blue 7) apt moo"
     echo -e "$yellow 8) telnet Start Wars"
-    line
 }
 
 function EggItem() {
+    line
     read -p "Please enter the option number：" EggItems
     case $EggItems in
     0)
