@@ -404,19 +404,7 @@ function items() {
 
     2)
         echo "正在安装 Adb"
-        if ! [ -x "$(command -v wget)" ]; then
-            apt install wget -y
-        fi
-        wget https://github.com/ivitan/Shell/releases/download/Adb/adb.zip -O ~/adb.zip
-        if ! [ -x "$(command -v unzip)" ]; then
-            apt install unzip -y
-        fi
-        unzip ~/adb.zip -d ~/
-        rm -rf ~/adb.zip
-        mv -f ~/adb $PREFIX/bin/
-        mv -f ~/fastboot $PREFIX/bin/
-        chmod +x $PREFIX/bin/adb
-        chmod +x $PREFIX/bin/fastboot
+        pkg install adnroid-tools -y
         echo "安装完成"
         line
         Tools
