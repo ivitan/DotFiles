@@ -469,8 +469,8 @@ function items() {
 
     8)
         pkg install nodejs-lts -y
-        git clone -b source https://github.com/iVitan/ivitan.github.io.git $HOME/Hexo
-        git clone https://github.com/ivitan/indigo.git $HOME/Hexo/themes/indigo
+        git clone -b source https://github.com/iVitan/ivitan.github.io.git $HOME/WorkSpace/Hexo
+        git clone https://github.com/ivitan/indigo.git $HOME/WorkSpace/Hexo/themes/indigo
         cd ~/hexo
         npm install -g hexo-cli
         npm install
