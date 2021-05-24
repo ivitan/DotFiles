@@ -471,7 +471,7 @@ function items() {
         pkg install nodejs-lts -y
         git clone -b source https://github.com/iVitan/ivitan.github.io.git $HOME/WorkSpace/Hexo
         git clone https://github.com/ivitan/indigo.git $HOME/WorkSpace/Hexo/themes/indigo
-        cd ~/hexo
+        cd $HOME/WorkSpace/Hexo
         npm install -g hexo-cli
         npm install
         wget https://github.com/ivitan/ivitan.github.io/releases/download/Pin/generator.js -O $HOME/Hexo/node_modules/hexo-generator-index/lib/generator.js
