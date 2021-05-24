@@ -283,21 +283,7 @@ function PyItem() {
 
     5)
         echo "Installing scrapy"
-        if ! [ -x "$(command -v wget)" ]; then
-            apt install wget -y
-        fi
-        wget https://github.com/ivitan/Shell/releases/download/Scrapy/openssl_1.1.1-2_arm.deb.gz -O ~/scrapy
-        wget https://github.com/ivitan/Shell/releases/download/Scrapy/openssl-dev_1.1.1-2_arm.deb.gz -O ~/scrapy
-        wget https://github.com/ivitan/Shell/releases/download/Scrapy/openssl-tool_1.1.1-2_arm.deb.gz -O ~/scrapy
-        cd ~/scrapy
-        gunzip openssl_1.1.1-2_arm.deb.gz
-        gunzip openssl-dev_1.1.1-2_arm.deb.gz
-        gunzip openssl-tool_1.1.1-2_arm.deb.gz
-        dpkg -i openssl_1.1.1-2_arm.deb
-        dpkg -i openssl-dev_1.1.1-2_arm.deb
-        dpkg -i openssl-tool_1.1.1-2_arm.deb
-
-        apt install openssl libffi
+        apt install openssl openssl-tool libffi
         pip install scrapy
         echo -e "$yellow Successful"
         line
@@ -326,9 +312,8 @@ function PyItem() {
         ;;
 
     8)
-        echo "Installing pandas scipy"
-        pip install pandas -y
-        pkg install scipy -y
+        echo "Installing pandas & scipy"
+        pip install pandas scipy -y
         echo -e "$blue Successful"
         line
         PythonTools
@@ -592,7 +577,7 @@ function items() {
         cd ~/chfs-linux-arm64-2.0
         chmod +x chfs
         ./chfs --port=8080 --path="/storage" --allow=192.168.0.1-192.168.0.200 --rule="::r|zsxwz:a1314520:r:Download:rw"
-        echo "Successful，浏览器打开192.168.XXX.XXX:8080！更多帮助请查阅 https://iscute.cn/chfs"
+        echo "Successful，open 192.168.XXX.XXX:8080"
         line
         Tools
         items
