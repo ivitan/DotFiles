@@ -77,3 +77,5 @@ Set-Alias gtst GitTst
 Set-Theme Paradox
 
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+
+Invoke-Expression (&starship init powershell)
