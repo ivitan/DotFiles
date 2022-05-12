@@ -473,3 +473,8 @@ function gtst() {
 if ! [ -x "$(command -v perl)" ];then
   apt install perl -y
 fi
+
+# To install tldr
+if ! [ -x "$(command -v tldr)" ];then
+  pkg install tealdeer -y
+fi
