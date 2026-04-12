@@ -1,5 +1,6 @@
 ">> 一般设置
 set mouse=a              " 鼠标可用
+set paste                " 粘贴保留样式
 set relativenumber       " 将行号设置为相对行号
 set wildmenu             " 命令行补全参数
 set cmdheight=2          " 设置命令行的高度
