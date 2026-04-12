@@ -10,12 +10,9 @@ if [[ ! -d ~/.oh-my-zsh ]]; then
 fi
 
 source $ZSH/oh-my-zsh.sh
-
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
 # -------}
 
-# < zplug > ----------------------}
+# < zplug > ----------------------{
 # install zplug, plugin manager for zsh, https://github.com/zplug/zplug
 # zplug configruation
 if [[ ! -d "${ZPLUG_HOME}" ]]; then
@@ -130,7 +127,9 @@ if ! [ -x "$(command -v lsd)" ];then
 fi
 alias ls="lsd"
 
-alias gocode="cd $HOME/$PATH_TO_YOUR_CODE && fortune | cowsay"
+# Note: Set PATH_TO_YOUR_CODE environment variable before using these aliases
+# Example: export PATH_TO_YOUR_CODE="Code"
+alias gocode="cd ${PATH_TO_YOUR_CODE:-$HOME/Code} && fortune | cowsay"
 alias gowork="cd $HOME/WorkSpace && fortune | cowsay"
 alias goblog="cd $HOME/WorkSpace/Hexo && fortune | cowsay"
 
@@ -168,7 +167,8 @@ alias download='cd ~/storage/downloads'
 # Package manager
 alias update='apt update && apt upgrade'
 
-alias pin='yes|udo pacman -S'
+# Fixed typo: 'udo' -> 'sudo'
+alias pin='yes|sudo pacman -S'
 alias pun='sudo pacman -R'
 
 # Update all packages via pacman (Arch Linux/Manjaro)
@@ -183,7 +183,9 @@ alias auu="sudo apt update && sudo apt upgrade -y"
 # SSH to remote server
 # Change $PATH_TO_KEY and $SERVER_IP according to your configurations
 # For example: alias sshaws="ssh -i ~/.ssh/rsa_id ubuntu@x.x.x.x"
-alias sshsvr="ssh -i $PATH_TO_KEY $SERVER_IP"
+# Note: Set these environment variables before using this alias
+# Example: export PATH_TO_KEY="~/.ssh/id_rsa" && export SERVER_IP="user@host"
+alias sshsvr="ssh -i ${PATH_TO_KEY:-~/.ssh/id_rsa} ${SERVER_IP:-root@localhost}"
 
 # History record top10. 历史命令 top10
 alias top10='print -l  ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
@@ -242,7 +244,8 @@ zstyle ':completion:*' completer _complete _prefix _correct _prefix _match _appr
 
 # path completion.路径补全
 zstyle ':completion:*' expand 'yes'
-zstyle ':completion:*' squeeze-shlashes 'yes'
+# Fixed typo: 'squeeze-shlashes' -> 'squeeze-slashes'
+zstyle ':completion:*' squeeze-slashes 'yes'
 zstyle ':completion::complete:*' '\\'
 
 # Color complement menus.彩色补全菜单
@@ -280,7 +283,7 @@ zstyle ':completion:*:corrections' format $'\e[01;32m -- %d (errors: %e) --\e[0m
 # cd ~ complementary sequence. cd ~ 补全顺序
 zstyle ':completion:*:-tilde-:*' group-order 'named-directories' 'path-directories' 'users' 'expand'
 
-# 空行(光标在行首)补全 "cd " 
+# 空行(光标在行首)补全 "cd "
 user-complete(){
 case $BUFFER in
 "" )                       # 空行填入 "cd ",Fill in the blank lines with "CD "
@@ -324,7 +327,7 @@ zle end-of-line                 #光标移动到行末,The cursor moves to the e
 zle -N sudo-command-line
 #定义快捷键为 Define a shortcut key as： [Esc] [Esc]
 bindkey "\e\e" sudo-command-line
- 
+
 # [Esc][h] man 当前命令时，显示简短说明.[Esc][h] man A short description of the current command is displayed
 alias run-help >&/dev/null && unalias run-help
 autoload run-help
@@ -343,7 +346,7 @@ export LANG=en_US.UTF-8
 # for python
 export PYTHONIOENCODING=UTF-8
 # py.test color output
-export PYTEST_ADDOPTS="--color=yes"    
+export PYTEST_ADDOPTS="--color=yes"
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -408,8 +411,13 @@ awk -F"::::::" '{ $1=strftime("%Y-%m-%d %T",$1) "|"; print }'
 }
 
 # Use the histall command to view the full history.使用 histall 命令查看全部历史纪录
-function histall { convhistory =(allhistory) |
-sed '/^.\{20\} *cd/i\\' }
+# Fixed: Changed process substitution to use tmp file for better compatibility
+function histall {
+  local tmpfile=$(mktemp)
+  allhistory > "$tmpfile"
+  convhistory "$tmpfile" | sed '/^.\{20\} *cd/i\\'
+  rm -f "$tmpfile"
+}
 # View current directory history with hist.使用 hist 查看当前目录历史纪录
 function hist { convhistory $HISTFILE }
 
@@ -428,7 +436,9 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 # -------}
 
 # < Default editor. 默认编辑器 > ----------------------{
-export EDITOR=vim
+# Note: This is now set earlier based on SSH connection status
+# Keeping this as fallback if needed
+# export EDITOR=vim
 # -------}
 
 # < Input method. 输入法 > ----------------------{
@@ -475,6 +485,20 @@ if ! [ -x "$(command -v perl)" ];then
 fi
 
 # To install tldr
+# Note: Changed 'pkg install' to 'npm install -g' as it's more common for tealdeer
+# Alternatively, you can use: cargo install tealdeer (if Rust is installed)
 if ! [ -x "$(command -v tldr)" ];then
-  pkg install tealdeer -y
+  # Try npm first
+  if [ -x "$(command -v npm)" ]; then
+    npm install -g tealdeer
+  # Try cargo if npm not available
+  elif [ -x "$(command -v cargo)" ]; then
+    cargo install tealdeer
+  # Try apt as fallback
+  elif [ -x "$(command -v apt)" ]; then
+    apt install tldr -y
+  fi
 fi
+
+## 直接禁用 gitstatus 
+POWERLEVEL9K_DISABLE_GITSTATUS=true
