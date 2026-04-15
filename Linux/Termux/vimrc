@@ -3,6 +3,11 @@ set mouse=a              " 鼠标可用
 set paste                " 粘贴保留样式
 set relativenumber       " 将行号设置为相对行号
 set wildmenu             " 命令行补全参数
+filetype on              " 设置开启文件类型侦测
+filetype plugin on       " 设置加载对应文件类型的插件
+syntax enable            " 开启语法高亮功能
+syntax on                " 自动语法高亮
+set t_Co=256             " 开启256色支持
 set cmdheight=2          " 设置命令行的高度
 set showcmd              " select模式下显示选中的行数
 set ruler                " 总是显示光标位置
@@ -11,10 +16,6 @@ set number               " 开启行号显示
 set cursorline           " 高亮显示当前行
 set ttimeoutlen=0        " 设置<ESC>键响应时间
 set virtualedit=block,onemore  " 允许光标出现在最后一个字符的后面
-set showmode             " 显示当前模式
-filetype on              " 设置开启文件类型侦测
-filetype plugin on       " 设置加载对应文件类型的插件
-filetype plugin indent on  " 自动检测文件类型并加载对应的缩进规则
  
 ">> 搜索设置
 set hlsearch            " 高亮显示搜索结果
@@ -34,32 +35,38 @@ syntax on
  
 hi pythonSelf            ctermfg=174 guifg=#6094DB cterm=bold gui=bold
 let python_highlight_all=1
+syntax enable
  
 ">> 状态行颜色
 highlight StatusLine guifg=SlateBlue guibg=Yellow
 highlight StatusLineNC guifg=Gray guibg=White
  
+">> 增强模式中的命令行自动完成操作
+set wildmenu
+ 
+">> 总是显示状态行
+set laststatus=2
+ 
+">> 命令行补全参数
+set wildmenu
+ 
 ">> 设置tab键空4格
 set tabstop=4
-set shiftwidth=4
+ 
+">> 自动检测文件类型
+filetype plugin indent on
  
 ">> 开启自动缩进，智能缩进
 set autoindent
 set cindent
 set smartindent
+set shiftwidth=4
  
 ">> 映射光标在窗口间移动的快捷键
 nmap <C-H> <C-W>h
 nmap <C-J> <C-W>j
 nmap <C-K> <C-W>k
 nmap <C-L> <C-W>l
- 
-">> 剪贴板支持
-set clipboard=unnamed,unnamedplus  " 使用系统剪贴板
-
-">> 粘贴格式保留
-set pastetoggle=<F2>     " 按F2键切换粘贴模式，粘贴时保留格式
-" 提示：在粘贴模式下，vim会自动保持缩进，不会破坏格式
  
 ">> vim-plug
 call plug#begin('~/.vim/plugged')
@@ -68,11 +75,12 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'Yggdroot/indentLine'
 Plug 'mhinz/vim-startify'
-Plug 'scrooloose/nerdtree'      " File tree manager
+Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/syntastic'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'scrooloose/nerdtree'      	" File tree manager
 Plug 'jistr/vim-nerdtree-tabs'      " enhance nerdtree's tabs
 Plug 'ryanoasis/vim-devicons'       " add beautiful icons besides files
 Plug 'Xuyuanp/nerdtree-git-plugin'  " display git status within Nerdtree
@@ -81,8 +89,10 @@ call plug#end()
  
 " <Nerdtree>-------------------{
     ">> Basic settings
+        "let g:NERDTreeChDirMode = 2  "Change current folder as root
         autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) |cd %:p:h |endif
-		map <C-T> :NERDTreeToggle<CR> "Toggle Nerdtree
+		map <C-T> :NERDTreeMirror<CR> "Open Nerdtree    
+		map <C-T> :NERDTreeToggle<CR> "Close Nerdtree
  
     ">> UI settings
         let NERDTreeQuitOnOpen=1   " Close NERDtree when files was opened
@@ -94,6 +104,11 @@ call plug#end()
         let NERDTreeAutoDeleteBuffer = 1  " Auto delete buffer deleted with NerdTree
         let NERDTreeShowBookmarks=1   " Show NERDTree bookmarks
         let NERDTreeIgnore = ['\.pyc$', '\.swp', '\.swo', '__pycache__']   " Hide temp files in NERDTree
+        "let g:NERDTreeShowLineNumbers=1  " Show Line Number
+    " Open Nerdtree when there's no file opened
+        "autocmd vimenter * if !argc()|NERDTree|endif
+    " Or, auto-open Nerdtree
+        "autocmd vimenter * NERDTree
     " Close NERDTree when there's no other windows
         autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
     " Customize icons on Nerdtree
@@ -134,7 +149,7 @@ call plug#end()
 " }
  
 ">> 基本主题配置
-set background=dark  "设置背景为黑色
+set bg=dark  "设置背景为黑色
 colorscheme gruvbox    "设置主题为 gruvbox
 set guioptions=        "去掉两边的scrollbar
 set guifont=Monaco:h17 "设置字体和字的大小
